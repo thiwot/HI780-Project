@@ -9,3 +9,5 @@ A key methodological contribution of this project is the empirical quantificatio
 
 # Dataset Access
 ## MIMIC-IV v3.1
+This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) version 3.1 database, a publicly available collection of deidentified electronic health records from Beth Israel Deaconess Medical Center (BIDMC) in Boston, Massachusetts.
+*MIMIC-IV is not included in this repository.* Access must be obtained independently through PhysioNet.
