@@ -15,23 +15,23 @@ This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) 
 
 ### How to Access MIMIC-IV
 
-**Step 1 — Create a PhysioNet account**
+**Step 1: Create a PhysioNet account**
 - Go to https://physionet.org
 - Register using your Gmail account and complete your profile
 
-**Step 2 — Complete CITI Training**
+**Step 2: Complete CITI Training**
 - Complete the "Data or Specimens Only Research" CITI training course
 - Upload your certificate to your PhysioNet profile under Settings → CITI Training
 
-**Step 3 — Request Access**
+**Step 3: Request Access**
 - Submit your credentialing application on https://physionet.org/content/mimiciv/
 - Approval typically takes 1-3 business days
 
-  **Step 4 — Sign the Data Use Agreement**
+**Step 4: Sign the Data Use Agreement**
 - After credentialing request is approve, navigate to https://physionet.org/content/mimiciv/
 - Read and sign the data use agreement at the bottom of the page
 
-  **Step 5 — Set Up Google Cloud BigQuery**
+**Step 5: Set Up Google Cloud BigQuery**
 - Go to https://console.cloud.google.com
 - Sign in with the same Gmail account used for PhysioNet
 - Create a new Google Cloud project
@@ -39,7 +39,7 @@ This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) 
 - Request access to the BigQuery dataset at:
 
   
-**Step 6 — Run SQL Pipeline**
+**Step 6: Run SQL Pipeline**
 - Open Google BigQuery console
 - Update the project prefix hi780-project.mimic_analysis 
   in each SQL script to match your own project and dataset name
