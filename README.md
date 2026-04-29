@@ -7,7 +7,7 @@ This project develops and evaluates machine learning models for predicting 90-da
 
 A key methodological contribution of this project is the empirical quantification of SMOTE data leakage by comparing results when SMOTE is applied before cross-validation (Weka) versus within training folds only (Python) to demonstrate the performance inflation introduced by incorrect oversampling placement.
 
-## Repository Strcuture
+## Repository Structure
 ```
 icu-readmission-mimic/
 ├── README.md
