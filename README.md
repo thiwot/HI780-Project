@@ -8,6 +8,7 @@ This project develops and evaluates machine learning models for predicting 90-da
 A key methodological contribution of this project is the empirical quantification of SMOTE data leakage by comparing results when SMOTE is applied before cross-validation (Weka) versus within training folds only (Python) to demonstrate the performance inflation introduced by incorrect oversampling placement.
 
 ## Repository Strcuture
+```
 icu-readmission-mimic/
 ├── README.md
 ├── synthetic_demo.csv                  # synthetic data for demo (no real patient data)
@@ -26,7 +27,7 @@ icu-readmission-mimic/
 │   └── icu_readmission_modeling.ipynb  # full modeling pipeline
 └── results/
     ├── roc_curves.png                  # ROC curve figure
-
+```
 # Dataset Access
 ## MIMIC-IV v3.1
 This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) version 3.1 database, a publicly available collection of deidentified electronic health records from Beth Israel Deaconess Medical Center (BIDMC) in Boston, Massachusetts, covering admissions from 2008 to 2019.
