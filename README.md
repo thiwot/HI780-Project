@@ -2,10 +2,30 @@
 ## HI780 Data Mining Course Project
 Predicting 90-day unplanned hospital readmission following ICU discharge using structured electronic health record data from the MIMIC-IV v3.1 database.
 
-# Project Overview
+## Project Overview
 This project develops and evaluates machine learning models for predicting 90-day hospital readmission after ICU discharge. Four classification algorithms (Logistic Regression, Naive Bayes, J48 Decision Tree, and Random Forest) were trained and evaluated across full (79-feature) and CFS-selected (4-feature) feature sets using 10-fold stratified cross-validation in both Weka 3.8 and Python 3.x.
 
 A key methodological contribution of this project is the empirical quantification of SMOTE data leakage by comparing results when SMOTE is applied before cross-validation (Weka) versus within training folds only (Python) to demonstrate the performance inflation introduced by incorrect oversampling placement.
+
+## Repository Strcuture
+icu-readmission-mimic/
+├── README.md
+├── synthetic_demo.csv                  # synthetic data for demo (no real patient data)
+├── sql/
+│   ├── 01_cohort.sql       # base cohort + readmit_90 label
+│   ├── 02_prior_admissions.sql      # prior admission count
+│   ├── 03_icu_stay.sql        # ICU stay count per hospitalization
+│   ├── 04_diagnosis.sql             # 11 ICD comorbidity flags
+│   ├── 05_lab_item_map.sql          # lab item mapping
+│   ├── 06_lab_events.sql            # raw lab event extraction
+│   ├── 07_lab_features_aggregated.sql      # peak lab aggregates
+│   ├── 08_lab_features_last.sql     # last lab values (pivoted)
+│   ├── 09_vital_signs.sql        # vital sign min/max per stay
+│   └── 10_final_table.sql   # final joined feature table
+├── python/
+│   └── icu_readmission_modeling.ipynb  # full modeling pipeline
+└── results/
+    ├── roc_curves.png                  # ROC curve figure
 
 # Dataset Access
 ## MIMIC-IV v3.1
@@ -21,14 +41,15 @@ This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) 
 
 **Step 2: Complete CITI Training**
 - Complete the "Data or Specimens Only Research" CITI training course
+   - CITI Course Instructions: https://physionet.org/about/citi-course/
 - Upload your certificate to your PhysioNet profile under Settings → CITI Training
 
 **Step 3: Request Access**
-- Submit your credentialing application on https://physionet.org/content/mimiciv/
+- Submit your credentialing application on [https://physionet.org/content/mimiciv/](https://physionet.org/content/mimiciv/3.1/)
 - Approval typically takes 1-3 business days
 
 **Step 4: Sign the Data Use Agreement**
-- After credentialing request is approve, navigate to https://physionet.org/content/mimiciv/
+- After credentialing request is approve, navigate to [https://physionet.org/content/mimiciv/](https://physionet.org/content/mimiciv/3.1/)
 - Read and sign the data use agreement at the bottom of the page
 
 **Step 5: Set Up Google Cloud BigQuery**
@@ -36,7 +57,7 @@ This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) 
 - Sign in with the same Gmail account used for PhysioNet
 - Create a new Google Cloud project
 - Return to PhysioNet and link your Google account under  Settings → Cloud
-- Request access to the BigQuery dataset at:
+- Request access to the BigQuery dataset at: https://physionet.org/content/mimiciv/3.1/
 
   
 **Step 6: Run SQL Pipeline**
