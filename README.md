@@ -50,7 +50,7 @@ This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) 
 - Approval typically takes 1-3 business days
 
 **Step 4: Sign the Data Use Agreement**
-- After credentialing request is approve, navigate to [https://physionet.org/content/mimiciv/](https://physionet.org/content/mimiciv/3.1/)
+- After credentialing request is approved, navigate to [https://physionet.org/content/mimiciv/](https://physionet.org/content/mimiciv/3.1/)
 - Read and sign the data use agreement at the bottom of the page
 
 **Step 5: Set Up Google Cloud BigQuery**
@@ -65,7 +65,7 @@ This project uses the Medical Information Mart for Intensive Care IV (MIMIC-IV) 
 - Open Google BigQuery console
 - Update the project prefix hi780-project.mimic_analysis 
   in each SQL script to match your own project and dataset name
-- Run SQL scripts in order as documented in the SQL Pipeline section
+- Run SQL scripts in order as documented in the SQL repository section
 - Export final_model_dataset_v3 as CSV when complete
   
 ## Running with Synthetic Data
